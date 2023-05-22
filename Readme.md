@@ -1,16 +1,16 @@
-#Instagram Post Prediction
+#**Instagram Post Prediction**
 
-##Description of the dataset 
+##**Description of the dataset **
 
 The dataset contains two data files
-###Instagram_profiles.csv 
+###**Instagram_profiles.csv**
 
 ['ig_id', 'username', 'metadata', 'followers', 'follows',
        'total_post_count', 'crawled', 'created_at', 'updated_at',
        'app_crawled']
 
 •	Number of rows : 537
-###Instagram_post_profile.csv
+###**Instagram_post_profile.csv**
 
 ['ig_id', 'post_id', 'permalink_url', 'metadata', 'comments', 'likes',
        'crawled', 'created_at', 'updated_at', 'slug', 'views', 'plays',
@@ -19,10 +19,10 @@ The dataset contains two data files
 No of rows: 6372 
 
 
-###Merging the two dataset
+###**Merging the two dataset**
 In order to do analysis of  the data both the dataset were merged on the column “Id_id”
 
-###Bivariate analysis and Feature engineering 
+###**Bivariate analysis and Feature engineering** 
 
 Following new features were created from the dataset :
 1.	Time_of_day : After extracting hours from timestamp , time is classified into morning ,afternoon ,evening , late evening , night 
@@ -37,7 +37,7 @@ Following new features were created from the dataset :
 
 
 
-##Image Features
+##**Image Features**
 
 Following new features were created using the images /reels download for the post :
 Dataset collection : Downloaded post from within the dataset mentioned post .
@@ -51,7 +51,7 @@ Note :The whole dataset couldn’t  be downloaded , due to memory and time restr
 
 
  
-##Model Building 
+##**Model Building**
 
 The following steps were taken built the model for the 1st Problem statement :
 1st Problem statement :
@@ -70,21 +70,24 @@ Target variable: likes
 
 Reason for selecting random forest : Building a supervised learning regression model for predicting the likes of an Instagram post . The random forest removed the overfitting issue faced in previous model which were initially tried to fit  eg linear regression , XGboost ,Decsion tree .
 
-##Predicting the comments of Instagram post
+##**Predicting the comments of Instagram post**
 
 Same Initial steps as above 
 
-###Features
+###**Features**
 
 'No_of_Hashtags', 'followers', 'day_of_week', 'username', 'Avg_comments', 'Post_Sentiments','Time_of_day','post_type','brightness','face_detection'
 Target_value: Comments
-###Model Selected : Random Forest 
 
-###Reason for selecting random forest : Building a supervised learning regression model for predicting the likes of an Instagram post . The random forest removed the overfitting issue faced in previous model which were initially tried to fit  eg linear regression , XGboost ,Decsion tree .
+Model Selected : Random Forest 
+
+###Reason for selecting random forest : 
+Building a supervised learning regression model for predicting the likes of an Instagram post . The random forest removed the overfitting issue faced in previous model which were initially tried to fit  eg linear regression , XGboost ,Decsion tree .
 
 
-##2st Problem statement :
-##To predict the engagement (views and plays) of future reels.
+##**2st Problem statement**
+
+##**To predict the engagement (views and plays) of future reels.**
 
 Predicting the views of Instagram Videos
 1.	Label Encoding : Encoding Categorical variables 
